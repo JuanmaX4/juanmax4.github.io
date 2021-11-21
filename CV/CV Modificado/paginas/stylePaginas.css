@@ -1,0 +1,303 @@
+
+/*Estilo pagina de fondo*/
+
+body{
+    background: #3399ff;
+  }
+  
+  
+  .circle{
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: ripple 15s infinite;
+    box-shadow: 0px 0px 1px 0px #508fb9;
+  }
+  
+  .small{
+    width: 200px;
+    height: 200px;
+    left: -100px;
+    bottom: -100px;
+  }
+  
+  .medium{
+    width: 400px;
+    height: 400px;
+    left: -200px;
+    bottom: -200px;
+  }
+  
+  .large{
+    width: 600px;
+    height: 600px;
+    left: -300px;
+    bottom: -300px;
+  }
+  
+  .xlarge{
+    width: 800px;
+    height: 800px;
+    left: -400px;
+    bottom: -400px;
+  }
+  
+  .xxlarge{
+    width: 1000px;
+    height: 1000px;
+    left: -500px;
+    bottom: -500px;
+  }
+  
+  .shade1{
+    opacity: 0.2;
+  }
+  .shade2{
+    opacity: 0.5;
+  }
+  
+  .shade3{
+    opacity: 0.7;
+  }
+  
+  .shade4{
+    opacity: 0.8;
+  }
+  
+  .shade5{
+    opacity: 0.9;
+  }
+  
+  @keyframes ripple{
+    0%{
+      transform: scale(0.8);
+    }
+    
+    50%{
+      transform: scale(1.2);
+    }
+    
+    100%{
+      transform: scale(0.8);
+    }
+  }
+
+
+  /* estilo de las habilidades */
+
+.wrapper{
+    width: 40%;
+    margin-top: 15em;
+    min-width: 590px;
+    position: relative;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.container{
+    width: 100%;
+    padding: 30px 30px 50px;
+    background-color: white;
+    border: 2px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+} 
+.container *{
+    font-family: "Poppins",sans-serif;
+    color: black;
+    font-weight: 500;
+}
+
+.skills:not(:last-child){
+    margin-bottom: 30px;
+}
+.details{
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.bar{
+    position: relative;
+ 
+    border: 2px solid #0d96e0;
+ 
+    border-radius: 20px;
+  
+}
+.bar div{
+    position: relative;
+    width: 0;
+    height: 9px;
+    border-radius: 10px;
+    background-color: #0d96e0;
+   
+ 
+}
+#html-bar{
+    animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+    100%{
+        width: 90%;
+    }
+}
+#css-bar{
+    animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+    100%{
+        width: 75%;
+    }
+}
+#js-bar{
+    animation: js-fill 2s forwards;
+}
+@keyframes js-fill {
+    100%{
+        width: 72%;
+    }
+}
+#angular-bar{
+    animation: angular-fill 2s forwards;
+}
+@keyframes angular-fill{
+    100%{
+        width: 70%;
+    }
+} 
+
+#java-bar{
+    animation: java-fill 2s forwards;
+}
+@keyframes java-fill{
+    100%{
+        width: 92%;
+    }
+} 
+#node-bar{
+    animation: node-fill 2s forwards;
+}
+@keyframes node-fill{
+    100%{
+        width: 65%;
+    }
+} 
+#python-bar{
+    animation: python-fill 2s forwards;
+}
+@keyframes python-fill{
+    100%{
+        width: 70%;
+    }
+} 
+#mysql-bar{
+    animation: mysql-fill 2s forwards;
+}
+@keyframes mysql-fill{
+    100%{
+        width: 80%;
+    }
+} 
+
+    /*el pie de pagina*/
+
+
+    .glow-on-hover {
+        width: 220px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+    }
+    
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    .glow-on-hover:active {
+        color: #000
+    }
+    
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+    
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+    
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+    .cv:hover
+    {
+            box-shadow:
+                    1px 1px #53a7ea,
+                    2px 2px #53a7ea,
+                    3px 3px #53a7ea;
+            -webkit-transform: translateX(-3px);
+            transform: translateX(-3px);
+    }
+
+    .box-shadow {
+        font-family: cursive, sans-serif;
+        background-color: #4377d8;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 2px 2px 20px 23px #7fecad;
+      }
+
+
+      
+h4{
+    float: left;
+}
+
+h5{
+    float: right;
+}
+
+
+/*footer*/
+footer{
+    background-color: black;
+    color: white; 
+    text-align: center;
+
+ }
