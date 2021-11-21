@@ -130,7 +130,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
-  color: #343a40;
+  color: #773434;
 }
 
 h1, .h1 {
@@ -2241,7 +2241,7 @@ progress {
 .form-control:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #deae9c;
+  border-color: white;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(189, 93, 56, 0.25);
 }
@@ -3055,7 +3055,7 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #000;
-  background-color: #bd5d38;
+  background-color: #797674;
   border-color: #bd5d38;
 }
 .btn-primary:hover {
@@ -5071,8 +5071,8 @@ textarea.form-control-lg {
 }
 
 .progress-bar-animated {
-  -webkit-animation: 1s linear progress-bar-stripes;
-          animation: 1s linear progress-bar-stripes;
+  -webkit-animation: 1s linear infinite progress-bar-stripes;
+          animation: 1s linear infinite progress-bar-stripes;
 }
 @media (prefers-reduced-motion: reduce) {
   .progress-bar-animated {
@@ -6238,8 +6238,8 @@ textarea.form-control-lg {
   border: 0.25em solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;
-  -webkit-animation: 0.75s linear spinner-border;
-          animation: 0.75s linear spinner-border;
+  -webkit-animation: 0.75s linear infinite spinner-border;
+          animation: 0.75s linear infinite spinner-border;
 }
 
 .spinner-border-sm {
@@ -6275,8 +6275,8 @@ textarea.form-control-lg {
   background-color: currentColor;
   border-radius: 50%;
   opacity: 0;
-  -webkit-animation: 0.75s linear spinner-grow;
-          animation: 0.75s linear spinner-grow;
+  -webkit-animation: 0.75s linear infinite spinner-grow;
+          animation: 0.75s linear infinite spinner-grow;
 }
 
 .spinner-grow-sm {
@@ -6415,8 +6415,8 @@ textarea.form-control-lg {
 }
 
 .placeholder-glow .placeholder {
-  -webkit-animation: placeholder-glow 2s ease-in-out ;
-          animation: placeholder-glow 2s ease-in-out ;
+  -webkit-animation: placeholder-glow 2s ease-in-out infinite;
+          animation: placeholder-glow 2s ease-in-out infinite;
 }
 
 @-webkit-keyframes placeholder-glow {
@@ -6435,8 +6435,8 @@ textarea.form-control-lg {
           mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
   -webkit-mask-size: 200% 100%;
           mask-size: 200% 100%;
-  -webkit-animation: placeholder-wave 2s linear ;
-          animation: placeholder-wave 2s linear ;
+  -webkit-animation: placeholder-wave 2s linear infinite;
+          animation: placeholder-wave 2s linear infinite;
 }
 
 @-webkit-keyframes placeholder-wave {
@@ -11314,7 +11314,11 @@ textarea.form-control-lg {
 }
 body {
   padding-top: 3.375rem;
-  color: #6c757d;
+  background-image: url('../images/background.jfif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #FFFF;
 }
 
 @media (min-width: 992px) {
@@ -11414,7 +11418,7 @@ p.lead {
   height: 3.5rem;
   width: 3.5rem;
   background-color: #495057;
-  color: #fff;
+  color: #FF9104;
   border-radius: 100%;
   font-size: 1.5rem;
   margin-right: 1.5rem;
@@ -11457,65 +11461,151 @@ section.resume-section .resume-section-content {
   }
 }
 
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
-:root {
-	--yellow: #feb60a;
-	--red: #ff0062;
-	--blue: #00dbf9;
-	--violet: #da00f7;
-}
-	body {
-	margin: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	background-color: #1a1940;
-  background-image: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,153,212,0) calc(15% + 100px), rgba(0,99,138,0) calc(85% + 100px), rgba(0,0,0,0.15) 100%);
-}
-div.container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-div > div {
-	width: 3vw;
-	height: 3vw;
-	border-radius: 100%;
-	margin: 2vw;
-	background-image: linear-gradient(145deg, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0) 100%);
-	animation: bounce 1.5s 0.5s linear ;
-}
-.yellow {
-	background-color: var(--yellow);
+.text-pattern {  
+  color: transparent;
+  background-color: #BC9E82;
+  background-image: repeating-linear-gradient(45deg,  transparent, transparent 25px, rgba(255,255,255,.5) 25px, rgba(255,255,255,.5) 50px);
+   -webkit-background-clip: text;
+    background-clip: text;   
+  animation: color 50s linear infinite; 
+  background-size: 200%;  
+  -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
 }
 
-.red {
-	background-color: var(--red);
-	animation-delay: 0.1s;
+@keyframes color {
+  from { 
+    background-position: 0% 50%;
+  }
+  to { 
+    background-position: 100% 50%; 
+  }
 }
 
-.blue {
-	background-color: var(--blue);
-	animation-delay: 0.2s;
+
+/*****************************************************************/
+
+
+.contenedor{
+  width: 500px;
+  margin: 100px auto;
+  margin-top: 15em;
+  padding: 0;
+  text-align: center;
+  display: block;
 }
 
-.violet {
-	background-color: var(--violet);
-	animation-delay: 0.3s;
+/** CARGANDO **/
+@keyframes chars{
+  0%{
+      color: rgba(0,0,0,0);
+  }
+  
+  25%{
+      color: rgba(0,0,0,.25);
+  }
+  
+  50%{
+      color: rgba(0,0,0,.50);
+  }
+  
+  75%{
+      color: rgba(0,0,0,.75);
+  }
+  
+  100%{
+      color: rgba(0,0,0,0);
+  }
 }
 
-@keyframes bounce {
-	0%, 50%, 100% {
-		transform: scale(1);
-		filter: blur(0px);
-	}
-	25% {
-		transform: scale(0.6);
-		filter: blur(3px);
-	}
-	75% {
-		filter: blur(3px);
-		transform: scale(1.4);
-	}
+.char1 {
+  color: rgba(0,0,0,0);
+  animation: chars 3s linear;
+}
+
+.char2 {
+  color: rgba(0,0,0,0);
+  animation: chars 3s linear;
+  animation-delay: 0.2s;
+}
+
+.char3 {
+  color: rgba(0,0,0,0);
+  animation: chars 3s linear;
+  animation-delay: 0.4s;
+}
+
+.char4 {
+  color: rgba(0,0,0,0);
+  animation: chars 3s linear;
+  animation-delay: 0.6s;
+}
+
+.char5 {
+  color: rgba(0,0,0,0);
+  animation: chars 3s linear;
+  animation-delay: 0.8s;
+}
+
+.char6 {
+  color: rgba(0,0,0,0);
+  animation: chars 3s linear;
+  animation-delay: 1s;
+}
+
+.char7 {
+  color: rgba(0,0,0,0);
+  animation: chars 3s linear;
+  animation-delay: 1.2s;
+}
+
+.char8 {
+  color: rgba(0,0,0,0);
+  animation: chars 3s linear;
+  animation-delay: 1.4s;
+}
+
+.carga {
+  width: 500px;
+  height: 25px;
+  margin: 0 auto;
+  background-color: grey;
+  border: 4px solid black;
+  /*Aqui va el tema de la caja donde la barra va cargando la caja*/
+}
+
+.barra {
+  animation: animacion 5s ease-in-out;
+  background-color: #bd5d38;
+}
+
+@keyframes animacion {
+  0% {
+      width: 0%;
+      height: 100%;
+  }
+  100% {
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+  }
+}
+
+section::after { 
+  animation: animacion2 10s ease-in-out;
+}
+
+@keyframes animacion2 {
+  0% {
+      visibility: hidden;
+      width: 0%;
+      height: 100%;
+  }
+  100% {
+      width: 100%;
+      height: 100%;
+      visibility: visible !important;
+  }
 }
