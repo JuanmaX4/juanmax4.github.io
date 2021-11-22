@@ -1,0 +1,293 @@
+
+/*Estilo pagina de fondo*/
+
+body{
+    background: #3399ff;
+  }
+  
+  
+  .circle{
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: ripple 6s;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 0px 1px 0px #508fb9;
+  }
+  
+  .small{
+    width: 200px;
+    height: 200px;
+    left: -100px;
+    bottom: -100px;
+  }
+  
+  .medium{
+    width: 400px;
+    height: 400px;
+    left: -200px;
+    bottom: -200px;
+  }
+  
+  .large{
+    width: 600px;
+    height: 600px;
+    left: -300px;
+    bottom: -300px;
+  }
+  
+  .xlarge{
+    width: 800px;
+    height: 800px;
+    left: -400px;
+    bottom: -400px;
+  }
+  
+  .xxlarge{
+    width: 1000px;
+    height: 1000px;
+    left: -500px;
+    bottom: -500px;
+  }
+  
+  .shade1{
+    opacity: 0.2;
+  }
+  .shade2{
+    opacity: 0.5;
+  }
+  
+  .shade3{
+    opacity: 0.7;
+  }
+  
+  .shade4{
+    opacity: 0.8;
+  }
+  
+  .shade5{
+    opacity: 0.9;
+  }
+  
+  @keyframes ripple{
+    0%{
+      transform: scale(0.8);
+    }
+    
+    50%{
+      transform: scale(1.2);
+    }
+    75%{
+      transform: scale(0.8);
+    }
+    100%{
+      transform: scale(0.0);
+    }
+  }
+
+/*Estilo h1*/
+
+  h1 {  
+    color: transparent;
+    background-color: #BC9E82;
+    background-image: repeating-linear-gradient(45deg,  transparent, transparent 25px, rgba(255,255,255,.5) 25px, rgba(255,255,255,.5) 50px);
+     -webkit-background-clip: text;
+      background-clip: text;   
+    animation: color 50s linear infinite; 
+    background-size: 200%;  
+  }
+  
+  @keyframes color {
+    from { 
+      background-position: 0% 50%;
+    }
+    to { 
+      background-position: 100% 50%; 
+    }
+  }
+    /*Boton para la pagina principal*/
+
+
+    .glow-on-hover {
+        width: 220px;
+        height: 50px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+    }
+    
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    .glow-on-hover:active {
+        color: #000
+    }
+    
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+    
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+    
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+
+h2,h3{
+    -webkit-animation:fontbulger 2s;
+    -moz-animation:fontbulger 2s;
+    -o-animation:fontbulger 2s;
+    animation:fontbulger 2s;
+}
+h4{
+    float: left;
+}
+h5{
+    float: right;
+}
+
+
+/*Caja donde iran el CV*/
+
+    .box {
+        border:4px solid rgb(0, 255, 191);
+        border-radius:11px 0;
+        color:rgb(208, 255, 0);
+        font-size:17px;
+     }
+     
+     @-webkit-keyframes fontbulger  {
+        0%, 100% {
+           font-size:16px;
+        }
+        
+        50% {
+           font-size:21px;
+        }
+     
+     }
+     
+     @-moz-keyframes fontbulger  {
+        0%, 100% {
+           font-size:16px;
+        }
+        
+        50% {
+           font-size:21px;
+        }
+     
+     }
+     
+     @-o-keyframes fontbulger  {
+        0%, 100% {
+           font-size:16px;
+        }
+        
+        50% {
+           font-size:21px;
+        }
+     
+     }
+     
+     @keyframes fontbulger  {
+        0%, 100% {
+           font-size:16px;
+        }
+        
+        50% {
+           font-size:21px;
+        }
+     
+     }
+
+
+     .box {
+        width:100%;
+        overflow:hidden;
+      }
+      .box p {
+        animation: slide-left 10s;
+      }
+      
+      @keyframes slide-left {
+        from {
+          margin-left: 100%;
+          width: 300%; 
+        }
+      
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+
+/*Cajas animada donde iran los conocimientos adquiridos*/
+
+#menu li{
+    width: 300px;
+    margin: 0 auto;
+    height: 50px;
+    font-size: 30px;
+    background-color: rgb(18, 27, 8);
+    color: lightgrey;
+    list-style-type: none;
+    margin-bottom: 5px;
+    text-align: center; 
+    transition-property:margin-left;
+    transition-duration:1s;
+    transition-timing-function:linear;
+
+    /* Animacion ida y vuelta */
+    -webkit-transition-property:margin-left;
+    -webkit-transition-duration:10s;
+    -webkit-transition-timing-function:linear;
+
+}
+
+#menu li:hover{
+    margin-left: 875px;
+}
+
+
+/*footer*/
+footer{
+    background-color: black;
+    color: white; 
+    text-align: center;
+
+ }
