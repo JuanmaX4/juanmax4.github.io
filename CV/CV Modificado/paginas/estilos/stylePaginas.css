@@ -85,6 +85,8 @@ body{
     }
   }
 
+  /*final de la animacion del fondo de pantalla*/
+
 /*Estilo h1*/
 
   h1 {  
@@ -101,6 +103,8 @@ body{
     background-size: 200%;  
   }
   
+  /*animacion del h1*/
+
   @keyframes color {
     from { 
       background-position: 0% 50%;
@@ -172,6 +176,8 @@ body{
         100% { background-position: 0 0; }
     }
 
+    /*final del boton*/
+
 h2,h3{
     -webkit-animation:fontbulger 2s;
     -moz-animation:fontbulger 2s;
@@ -185,7 +191,6 @@ h5{
     float: right;
 }
 
-
 /*Caja donde iran el CV*/
 
     .box {
@@ -193,9 +198,18 @@ h5{
         border-radius:11px 0;
         color:rgb(208, 255, 0);
         font-size:17px;
-     }
+     } 
      
-      /* Responsive layout - makes a one column layout instead of a two-column layout */
+    /* Responsive layout */
+    @media (max-width: 950px) {
+      .box{    
+          font-size: 13px;
+          text-align: left;
+      }
+    }
+
+    /********************************/
+
       @media (max-width: 800px) {
         .flex-container {
           flex-direction: column;
@@ -209,8 +223,7 @@ h5{
         
         50% {
            font-size:21px;
-        }
-     
+        }     
      }
      
      @-moz-keyframes fontbulger  {
@@ -220,8 +233,7 @@ h5{
         
         50% {
            font-size:21px;
-        }
-     
+        }     
      }
      
      @-o-keyframes fontbulger  {
@@ -231,8 +243,7 @@ h5{
         
         50% {
            font-size:21px;
-        }
-     
+        }     
      }
      
      @keyframes fontbulger  {
