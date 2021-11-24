@@ -90,6 +90,8 @@ body{
   h1 {  
     color: transparent;
     background-color: #0c6e75;
+    font-size:10vw;
+    text-align: center;
     background-image: repeating-linear-gradient(45deg,  transparent, transparent 25px, rgba(255,255,255,.5) 25px, rgba(255,255,255,.5) 50px);
      -webkit-background-clip: text;
       background-clip: text;   
@@ -187,12 +189,19 @@ h5{
 /*Caja donde iran el CV*/
 
     .box {
-        border:4px solid rgb(0, 255, 191);
+        border:4px solid rgb(5, 71, 55);
         border-radius:11px 0;
         color:rgb(208, 255, 0);
         font-size:17px;
      }
      
+      /* Responsive layout - makes a one column layout instead of a two-column layout */
+      @media (max-width: 800px) {
+        .flex-container {
+          flex-direction: column;
+        }
+      }
+
      @-webkit-keyframes fontbulger  {
         0%, 100% {
            font-size:16px;
@@ -293,5 +302,4 @@ footer{
     background-color: black;
     color: white; 
     text-align: center;
-
  }
